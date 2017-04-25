@@ -21,7 +21,7 @@ div.screenshot-container div.left div.container {
 }
 
 div.screenshot-container div.left img {
-  width: 100%;
+  width: calc(100% - 24px);
   border: solid 12px #00a0c6;
 }
 div.screenshot-container div.left p {
@@ -40,8 +40,8 @@ div.screenshot-container div.right div.container{
 }
 
 div.screenshot-container div.right img {
-  width: 100%;
-   border: solid 12px #00a0c6;
+  width: calc(100% - 24px);
+  border: solid 12px #00a0c6;
 }
 
 div.screenshot-container div.right p {
