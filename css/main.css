@@ -2,31 +2,51 @@
 html {
 	background-color: #76ddec;
 }
+body {
+  margin: 0;
+}
 
-div.left {
+div.screenshot-container {
+  background-color: #08343e;
+}
+div.screenshot-container div.row {
+  display: flex;
+}
+div.screenshot-container div.left,
+div.screenshot-container div.right {
+  flex: 1;
+}
+div.screenshot-container div.left div.container {
+  padding: .25in;
+}
+
+div.screenshot-container div.left img {
+  width: 100%;
+  border: solid 12px #00a0c6;
+}
+div.screenshot-container div.left p {
+  width: 100%;
+  vertical-align: top;
+  color: white;
+}
+
+div.screenshot-container div.right {
   display: inline-block;
   width: 49%;
+  
+}
+div.screenshot-container div.right div.container{
+  padding: .25in;
 }
 
-div.left img {
+div.screenshot-container div.right img {
   width: 100%;
+   border: solid 12px #00a0c6;
 }
 
-div.left p {
+div.screenshot-container div.right p {
   width: 100%;
-}
-
-div.right {
-  display: inline-block;
-  width: 49%;
-}
-
-div.right img {
-  width: 100%;
-}
-
-div.right p {
-  width: 100%;
+  color: white;
 }
 
 /*
@@ -50,27 +70,38 @@ div.right img {
 }
 */
 
-.img-circle {
+div.bio-container .img-circle {
   border-radius: 50%
 }
 
-.bio-card {
-  width: 29%;
-  margin: 20px;
+div.bio-container .bio-card-outer {
+  width: 33%;
   display: inline-block;
+}
+
+div.bio-container .bio-card-inner {
+  margin: 20px;
+  padding: 8px;
   text-align: center;
+  background-color: #08343e;
+  /*border: <type> <width> <color>*/
+  border: solid 12px #00a0c6;
 }
 
-.bio-card p {
+div.bio-container .bio-card-inner p {
   text-align: justify;
+  color: white;
+}
+div.bio-container .bio-card-inner h2 {
+  color: white;
 }
 
-.row {
-  width: 90%
+div.bio-container .row {
+  width: 90%;
   margin: 15px auto;
   display: block;
 }
 
-.column {
+div.bio-container .column {
   margin: auto;
 }
