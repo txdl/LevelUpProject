@@ -1,16 +1,19 @@
 ﻿#pragma strict
- var bullet: GameObject;
- var bulletlocation: Transform;
- var bulletspeed: int;
 
-function Start () {
+var Bullet: GameObject;
+var Bulletlocation: Transform;
+var Bulletspeed: int;
+
+function Start() {
 
 }
 
-function Update () {
+function Update() {
   if (Input.GetButtonDown("Fire1")) {
-    //Debug.Log("wrong");
-    var thisbullet: GameObject = Instantiate(bullet, bulletlocation.position, bulletlocation.rotation);
-    thisbullet.GetComponent(Rigidbody).AddForce(thisbullet.transform.forward * bulletspeed,ForceMode.Impulse);
+    var bullet: GameObject;
+
+    bullet = Instantiate(Bullet, Bulletlocation.position, Bulletlocation.rotation);
+    bullet.GetComponent(Rigidbody)
+      .AddForce(bullet.transform.forward * Bulletspeed, ForceMode.Impulse);
   }
 }

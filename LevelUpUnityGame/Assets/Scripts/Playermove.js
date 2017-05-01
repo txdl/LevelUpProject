@@ -7,19 +7,20 @@ var moveSpeed: float;
 var driftspeed: int;
 var jumpSpeed: int;
 
-function Start () {
+function Start() {
   rb = GetComponent(Rigidbody);
 }
 
-function Update () {
+function Update() {
   hMove = Input.GetAxis("Horizontal");
   vMove = Input.GetAxis("Vertical");
-  if (Input.GetButtonDown("Jump")){
-  rb.AddForce(Vector3.up * jumpSpeed,ForceMode.Acceleration);
+
+  if (Input.GetButtonDown("Jump")) {
+    rb.AddForce(Vector3.up * jumpSpeed, ForceMode.Acceleration);
   };
 }
 
-function FixedUpdate () {
+function FixedUpdate() {
   rb.AddForce(Vector3.forward * vMove * moveSpeed);
   rb.AddForce(Vector3.right * hMove * moveSpeed);
   //transform.rotation = Quaternion.LookRotation(rb.velocity);
