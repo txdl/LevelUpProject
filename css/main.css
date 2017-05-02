@@ -1,7 +1,7 @@
 
 html {
 	background-color: #76ddec;
-  font-family: 'Lobster', cursive;
+  font-family: 'Wendy One', cursive;
 }
 body {
   margin: 0;
@@ -12,7 +12,6 @@ body {
   font-size: 30px;
   display: -webkit-flex;
   display: flex;
-  position: absolute;
   top: 0;
   right: 0;
   width: 100%;
@@ -21,13 +20,13 @@ body {
   background-color: #00a0c6;
   border-bottom: solid 12px  #08343e;
   font-family: 'Bungee Inline', cursive;
+  position: fixed;
+
 }
 
 .flex-item {
-  width: 33%;
+  flex: 1;
   height: 20px;
-  margin-right: 5px;
-  margin-left: 5px;
   text-align: center;
   padding-top: 40px;
   padding-bottom: 40px;
