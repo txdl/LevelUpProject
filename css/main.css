@@ -50,10 +50,12 @@ div.screenshot-container {
 }
 div.screenshot-container div.row {
   display: flex;
+  align-items: center;
 }
 div.screenshot-container div.left,
 div.screenshot-container div.right {
   flex: 1;
+  text-align: justify;
 }
 div.screenshot-container div.left div.container {
   padding: .25in;
@@ -72,6 +74,7 @@ div.screenshot-container div.left p {
 div.screenshot-container div.right {
   display: inline-block;
   width: 49%;
+
 }
 div.screenshot-container div.right div.container{
   padding: .25in;
