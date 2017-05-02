@@ -36,9 +36,13 @@ body {
 }
 
 .intro {
+  width: 90%;
   text-align: center;
-  margin-top: 125px;
-  margin-bottom: 25px;
+  margin: 125px auto 25px;
+  padding: 8px;
+  background-color: #08343e;
+  border: solid 12px #00a0c6;
+  color: white;
 }
 
 div.screenshot-container {
