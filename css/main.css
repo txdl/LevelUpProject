@@ -1,6 +1,7 @@
 
 html {
 	background-color: #76ddec;
+  font-family: 'Lobster', cursive;
 }
 body {
   margin: 0;
@@ -8,7 +9,7 @@ body {
 
 .navbar {
   column-width: auto;
-  font-size: 20px;
+  font-size: 30px;
   display: -webkit-flex;
   display: flex;
   position: absolute;
@@ -18,6 +19,8 @@ body {
   height: 100px;
   color: #e1e1e1;
   background-color: #00a0c6;
+  border-bottom: solid 12px  #08343e;
+  font-family: 'Bungee Inline', cursive;
 }
 
 .flex-item {
@@ -29,10 +32,15 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #00a0c6;
+  text-decoration: none;
 }
 
-.flex-item:hover { 
+.active, .flex-item:hover { 
   background-color: #08343e;
+  color: #ffffff;
+}
+.flex-item:visited {
+  color: #e1e1e1;
 }
 
 .intro {
