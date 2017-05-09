@@ -94,6 +94,68 @@ div.screenshot-container div.right p {
   color: white;
 }
 
+div.settings-container {
+  top: 88px;
+  position: relative;
+  background-color: #08343e;
+}
+div.settings-container div.row {
+  display: flex;
+  align-items: center;
+}
+div.settings-container div.left,
+div.settings-container div.middle,
+div.settings-container div.right {
+  flex: 1;
+  text-align: justify;
+}
+div.settings-container div.left div.container {
+  padding: .25in;
+}
+
+div.settings-container div.left img {
+  width: calc(100% - 24px);
+  border: solid 12px #00a0c6;
+}
+div.settings-container div.left p {
+  width: 100%;
+  vertical-align: top;
+  color: white;
+}
+
+div.settings-container div.middle div.container {
+  padding: .25in;
+}
+
+div.settings-container div.middle img {
+  width: calc(100% - 24px);
+  border: solid 12px #00a0c6;
+}
+div.settings-container div.middle p {
+  width: 100%;
+  vertical-align: top;
+  color: white;
+}
+
+div.settings-container div.right {
+  display: inline-block;
+  width: 49%;
+
+}
+div.settings-container div.right div.container{
+  padding: .25in;
+}
+
+div.settings-container div.right img {
+  width: calc(100% - 24px);
+  border: solid 12px #00a0c6;
+}
+
+div.settings-container div.right p {
+  width: 100%;
+  color: white;
+}
+
 div.bio-container .img-circle {
   border-radius: 50%
 }
