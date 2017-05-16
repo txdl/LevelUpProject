@@ -5,18 +5,24 @@ var moveSpeed: float;
 var driftspeed: int;
 var lastInput: Vector3;
 var currentTime: float;
+var attackRadius: float;
+var playerPosition: Vector3;
+var playerboat: GameObject;
+var enemyPosition: Vector3;
+var attackVector: Vector3;
 
 function Start() {
   rb = GetComponent(Rigidbody);
+  playerboat = GameObject.Find("Playerboat");
+  attackRadius = 15;
 }
-function Movement() {
- var rando: Vector3 = new Vector3(Random.Range(-1.0,1.0), 0, Random.Range(-1.0,1.0)); 
- rb.AddForce (rando * moveSpeed,ForceMode.Impulse);
- Debug.Log(rando);
-}
+
 function Update () {
-	if(Time.time > currentTime) { 
-		Movement () ; 
-		currentTime+=7;
+	enemyPosition = this.gameObject.transform.position;
+	playerPosition = playerboat.transform.position;
+	attackVector = playerPosition - enemyPosition;
+	if (attackVector.magnitude < attackRadius) {
+		Debug.Log('attack');
+		rb.AddForce(attackVector * moveSpeed, ForceMode.Impulse);
 	}
 }
