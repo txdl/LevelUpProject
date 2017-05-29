@@ -12,11 +12,9 @@ var playerPosition: Vector3;
 var playerboat: GameObject;
 var enemyPosition: Vector3;
 var attackVector: Vector3;
-var sj: SpringJoint;
 
 function Start() {
   rb = GetComponent(Rigidbody);
-  sj = GetComponent(SpringJoint);
   playerboat = GameObject.Find("Playerboat");
   // attackRadius = 15;
 }
@@ -26,16 +24,22 @@ function Update () {
 	playerPosition = playerboat.transform.position;
 	attackVector = playerPosition - enemyPosition;
 	
-	if (attackVector.magnitude < attackRadius) {
+	if (Vector3.Distance(playerPosition,enemyPosition) < attackRadius) {
 		isChasing = true;
+	} else {
+		isChasing = false;
 	}
 
 	if (isChasing && !isHarpooned) {
 		attackVector.Normalize();
 		rb.AddForce(attackVector * moveSpeed, ForceMode.Acceleration);
-
-		sj.anchor = enemyPosition;
 	}
+	if (!isHarpooned){
+		if (rb.velocity != Vector3.zero) {
+	 	   transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(rb.velocity),Time.deltaTime * 5);
+		}
+	}
+	transform.position.y = 0.5;
 }
 
 function startChasing() {

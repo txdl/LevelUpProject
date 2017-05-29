@@ -362,7 +362,6 @@ GameObject:
   - component: {fileID: 54648983565358680}
   - component: {fileID: 136894230139599618}
   - component: {fileID: 114015530360418256}
-  - component: {fileID: 145203919569619528}
   - component: {fileID: 120722452170756064}
   - component: {fileID: 114639086032389178}
   m_Layer: 0
@@ -556,7 +555,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1961156876497810}
   m_LocalRotation: {x: -0.0000000055272, y: -0.9984777, z: -0.00000011907645, w: -0.055157557}
-  m_LocalPosition: {x: 0.91457, y: 0.29, z: -4.7129}
+  m_LocalPosition: {x: 9.143089, y: 0.5, z: 10.092058}
   m_LocalScale: {x: 0.32659402, y: 0.32659408, z: 0.32659408}
   m_Children:
   - {fileID: 4943924374840316}
@@ -1590,12 +1589,12 @@ Rigidbody:
   m_GameObject: {fileID: 1961156876497810}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &114015530360418256
 MonoBehaviour:
@@ -1609,18 +1608,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  moveSpeed: 20
+  moveSpeed: 10
   isHarpooned: 0
-  isChasing: 1
+  isChasing: 0
   driftspeed: 5
   lastInput: {x: 0, y: 0, z: 0}
   currentTime: 0
-  attackRadius: 0
+  attackRadius: 25
   playerPosition: {x: 0, y: 0, z: 0}
   playerboat: {fileID: 0}
   enemyPosition: {x: 0, y: 0, z: 0}
   attackVector: {x: 0, y: 0, z: 0}
-  sj: {fileID: 0}
 --- !u!114 &114639086032389178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1636,7 +1634,6 @@ MonoBehaviour:
   howfar: 0
   firerdist: 7
   harpoonamt: 1
-  sj: {fileID: 145203919569619528}
   line: {fileID: 120722452170756064}
   enemyMovement: {fileID: 0}
 --- !u!120 &120722452170756064
@@ -1750,23 +1747,3 @@ CapsuleCollider:
   m_Height: 10
   m_Direction: 2
   m_Center: {x: 0, y: 2, z: 1.5}
---- !u!145 &145203919569619528
-SpringJoint:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1961156876497810}
-  m_ConnectedBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.91457, y: 0.29, z: -4.7129}
-  serializedVersion: 2
-  m_Spring: 10
-  m_Damper: 0.2
-  m_MinDistance: 0
-  m_MaxDistance: 0
-  m_Tolerance: 0.025
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 1
-  m_EnablePreprocessing: 1

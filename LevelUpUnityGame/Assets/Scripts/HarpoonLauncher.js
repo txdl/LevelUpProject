@@ -4,14 +4,15 @@ var player: GameObject;
 var howfar: float;
 var firerdist: float;
 var harpoonamt: int = 1;
-var sj: SpringJoint;
 var line: LineRenderer;
 var enemyMovement: Enemymovement;
+var joint: ConfigurableJoint;
+var jointed : boolean;
 
 
 function Start() {
   player = GameObject.Find("Playerboat");
-  enemyMovement = GameObject.Find('Pirate Ship').GetComponent('Enemymovement');
+  enemyMovement = GetComponent.<Enemymovement>();
 }
 
 function Update() {
@@ -30,6 +31,20 @@ function Update() {
 function Fire() {
   harpoonamt--;
   Debug.Log('fire');
-  sj.connectedBody = player.GetComponent.<Rigidbody>();
+  joint = player.AddComponent.<ConfigurableJoint>();
+  player.GetComponent.<Playermove>().attached++;
+  joint.connectedBody = GetComponent.<Rigidbody>();
+  joint.xDrive.positionSpring = 10;
+  joint.zDrive.positionSpring = 10;
+  joint.xDrive.positionDamper = 0.2;
+  joint.zDrive.positionDamper = 0.2;
   line.enabled = true;
+  jointed = true;
+}
+
+function JointCheck(){
+  if (jointed){
+    player.GetComponent.<Playermove>().attached--;
+    Destroy(joint);
+  }
 }
