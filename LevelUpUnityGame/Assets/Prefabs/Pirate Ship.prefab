@@ -1610,9 +1610,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   moveSpeed: 20
+  isHarpooned: 0
+  isChasing: 1
   driftspeed: 5
   lastInput: {x: 0, y: 0, z: 0}
   currentTime: 0
+  attackRadius: 0
+  playerPosition: {x: 0, y: 0, z: 0}
+  playerboat: {fileID: 0}
+  enemyPosition: {x: 0, y: 0, z: 0}
+  attackVector: {x: 0, y: 0, z: 0}
+  sj: {fileID: 0}
 --- !u!114 &114639086032389178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1630,6 +1638,7 @@ MonoBehaviour:
   harpoonamt: 1
   sj: {fileID: 145203919569619528}
   line: {fileID: 120722452170756064}
+  enemyMovement: {fileID: 0}
 --- !u!120 &120722452170756064
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -1759,5 +1768,5 @@ SpringJoint:
   m_Tolerance: 0.025
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
