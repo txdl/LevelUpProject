@@ -18,13 +18,26 @@
       <br>
       <div style="text-align:center;padding:20px">
         <br>
-        <button onclick="PSpeedUp()">ChangeText</button>
+        <button onclick="RichToggle()">Movement Change (to true)</button>
+
       </div>
     </div>    
 <script>
-  function PSpeedUp(){
-    SendMessage ("BrowserInteraction", "ChangeText", "New text goes here!");
-  }
+var difficulty = window.localStorage.getItem('presetSelector') || 'easy';
+var movement = window.localStorage.getItem('richToggle')// 'universal' or 'perspective';
+var harpoonamt = window.localStorage.getItem('harpoonCountSelector')// 'two' or 'four';
+var jumpy = window.localStorage.getItem('jumpSelector')// 'jump' or 'noJump';
+
+window.setTimeout(function() {
+  SendMessage ("BrowserInteraction", "presetSelector", difficulty);
+  // write code here
+}, 1000);
+
+function RichToggle(){
+  SendMessage ("BrowserInteraction", "RichMove", "true");
+}
+
+
 </script>
   %UNITY_WEBGL_LOADER_GLUE%
   </body>
