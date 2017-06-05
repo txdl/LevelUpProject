@@ -14,6 +14,7 @@ var movementAllowed : boolean;
 var shootScript: playerShoot;
 var maxAttached : int;
 var scoreScript: playerscoreboard;
+var sahabjump : boolean;
 
 function Start() {
   rb = GetComponent(Rigidbody);
@@ -23,12 +24,13 @@ function Update() {
   if (movementAllowed){
     hMove = Input.GetAxis("Horizontal");
     vMove = Input.GetAxis("Vertical");
-    /*
-    if (Input.GetButtonDown("Jump")) {
+    
+    if (Input.GetButtonDown("Jump")&& sahabjump) {
       rb.AddForce(Vector3.up * jumpSpeed, ForceMode.Acceleration);
     };
-    */
-    if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")) {
+    
+
+    if (Input.GetButtonDown("Fire1")) {
       shootScript.Fire();
     }
   }
