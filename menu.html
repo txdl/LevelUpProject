@@ -5,6 +5,8 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
   </head>
   <body>
     <!--Start of navbar section -->
@@ -32,30 +34,36 @@
         
         <div class="right">
           <div class="container">
-            <p>drop-down</p>
+            <select id="presetSelector">
+              <option value="easy">Easy</option>
+              <option value="hard">Hard</option>
+            </select>
           </div>
         </div>
       </div>
       <!-- End row -->
 
-      <div class="hide">
+
         <!-- Start row -->
         <div class="row">
           <div class="left">
             <div class="container">
-              <p>Boat speed</p>
+              <p>Control style</p>
             </div>
           </div>
 
           <div class="middle">
             <div class="container">
-              <p>Change the boat's speed</p>
+              <p>Change the Eco-Boat's controls</p>
             </div>
           </div>
 
           <div class="right">
             <div class="container">
-              <p>UP / DOWN</p>
+              <select id="richToggle">
+                <option value="universal">Universal</option>
+                <option value="perspective">Perspective</option>
+              </select>
             </div>
           </div>
         </div>
@@ -65,17 +73,20 @@
         <div class="row">
           <div class="left">
             <div class="container">
-              <p>Bullet speed</p>
+              <p>Harpoon death count</p>
             </div>
           </div>
           <div class="middle">
             <div class="container">
-              <p>Change the firing rate</p>
+              <p>Number of pirates attached to the Eco-Boat before defeat</p>
             </div>
           </div>
           <div class="right">
             <div class="container">
-              <p>placeholder</p>
+              <select id="harpoonCountSelector">
+                <option value="two">2</option>
+                <option value="four">4</option>
+              </select>
             </div>
           </div>
         </div>
@@ -85,37 +96,20 @@
         <div class="row">
           <div class="left">
             <div class="container">
-              <p>Pirate spawn rate</p>
+              <p>Jump feature toggle</p>
             </div>
           </div>
           <div class="middle">
             <div class="container">
-              <p>Varies the pirate ship spawn rate</p>
+              <p>Turn on/off the Eco-Boat's jump feature</p>
             </div>
           </div>
           <div class="right">
             <div class="container">
-              <p>placeholder</p>
-            </div>
-          </div>
-        </div>
-        <!-- End row -->
-
-        <!-- Start row -->
-        <div class="row">
-          <div class="left">
-            <div class="container">
-              <p>Pollution spawn rate</p>
-            </div>
-          </div>
-          <div class="middle">
-            <div class="container">
-              <p>Varies the pollution pool spawn rate</p>
-            </div>
-          </div>
-          <div class="right">
-            <div class="container">
-              <p>placeholder</p>
+              <select id="jumpSelector">
+                <option value="jump">Jump!</option>
+                <option value="noJump">No jumping</option>
+              </select>
             </div>
           </div>
         </div>

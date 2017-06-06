@@ -161,10 +161,12 @@ div.settings-container div.right div.container{
   padding: .25in;
 }
 
-div.settings-container div.right p {
+div.settings-container div.right select {
+  font-family: 'Bungee Inline', cursive;
+  text-align: center;
   width: 100%;
-  color: white;
 }
+
 
 div.bio-container .img-circle {
   border-radius: 50%;
