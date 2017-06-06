@@ -31,7 +31,7 @@ body {
   text-decoration: none;
 }
 
-.active, .flex-item:hover { 
+.active, .flex-item:hover {
   background-color: #00a0c6;
   color: #ffffff;
 }
@@ -48,6 +48,14 @@ body {
   background-color: #08343e;
   border: solid 12px #00a0c6;
   color: white;
+}
+
+.game-container {
+  margin: 125px auto 25px;
+}
+.game-container canvas {
+  display: block;
+  margin: 0 auto;
 }
 
 .hide {
