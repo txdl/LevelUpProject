@@ -4,6 +4,10 @@ import UnityEngine.UI;
 var moveScript: Playermove;
 var worldgen: WorldGeneration;
 
+function Start(){
+	Application.ExternalCall("UnityReady");
+}
+
 function RichMove (toggleRich:String){
 	if (toggleRich=="universal"){
 		moveScript.richMove=true;
@@ -12,20 +16,13 @@ function RichMove (toggleRich:String){
 		moveScript.richMove=false;
 	}
 }
-function AmtRock (amt:String){
-	worldgen.rockAmt=parseInt(amt);
-}
-
-function AmtPool(amt:String){
-	worldgen.poolAmt=parseInt(amt);
-}
-
-function AmtPirate(amt:String){
-	worldgen.pirateAmt=parseInt(amt);
-}
 
 function HarpoonDEATH(amt:String){
-	moveScript.maxAttached=parseInt(amt);
+	if (amt == "two"){
+		moveScript.maxAttached = 2;
+	} else {
+		moveScript.maxAttached = 4;
+	}
 }
 
 function ActivateJump (toggleSahab:String){
