@@ -167,11 +167,12 @@ div.settings-container div.right p {
 }
 
 div.bio-container .img-circle {
-  border-radius: 50%
+  border-radius: 50%;
+  width: 200px;
 }
 
 div.bio-container .bio-card-outer {
-  width: 33%;
+  width: 49.8%;
   display: inline-block;
 }
 
