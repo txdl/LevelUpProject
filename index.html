@@ -1,66 +1,129 @@
-<!doctype html>
-<html lang="en-us">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>PollutionPirates</title>
+    <title>Landing Page</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet">
-    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
-    <script src="TemplateData/UnityProgress.js"></script>
   </head>
-  <body class="template">
-      <!--Start of navbar section -->
+  <body>
+    <!--Start of navbar section -->
     <div class="navbar">
-      <a href="index.html" class="flex-item">Home</a>
+      <a href="index.html" class="flex-item active">Home</a>
       <a href="menu.html" class="flex-item">Menu</a>
-      <a href="game.html" class="flex-item active">Game</a>
+      <a href="WebGL/index.html" class="flex-item">Game</a>
     </div>
-    <!--End of navBar section -->  
-    <div class="template-wrap clear">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600" width="960"></canvas>
-      <br>
-      <div class="logo"></div>
-      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">PollutionPirates</div>
-      <br>
-      <div style="text-align:center;padding:20px">
-        <br>
-        <button onclick="RichToggle()">Movement Change (to true)</button>
+    <!--End of navBar section -->
 
+    <!--Start of intro section -->
+    <div class="intro">
+      <h1>
+        Eco-Boat
+      </h1>
+      <p>
+        Eco-Boat is a project thought up by the brilliant students of TXDL. They participated in a 14 week program in which they learned web developemnt, game developement, and general programming. The game was built using unity and the website was built from scratch!
+      </p>
+    </div>
+    <!--End of intro section -->
+
+    <!-- Start screenshot section -->
+    <div class="screenshot-container">
+      <div class="row">
+        <div class="left">
+          <div class="container">
+            <img src="img/screenshot.jpg"> 
+          </div>
+        </div>
+        
+        <div class="right">
+          <div class="container">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar dolor non finibus mollis. Etiam a purus eget ipsum vehicula rutrum. Fusce aliquam dolor vel dolor ultrices, vel finibus dui aliquam. Sed efficitur vestibulum turpis. Sed blandit non eros ac venenatis. Vestibulum malesuada, dolor ac pellentesque blandit, dui dui viverra risus, eget interdum ex erat quis elit. Donec convallis mi et dui gravida dictum. Donec viverra sapien id pharetra scelerisque. Aliquam ultricies enim nisl, vel tristique velit posuere porttitor. Aliquam quis tincidunt eros. Mauris mauris orci, consequat at tincidunt ut, sollicitudin vel augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam est nunc, eleifend et gravida vel, vulputate quis libero.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>    
-<script>
+      <div class="row">
+        <div class="left">
+          <div class="container">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar dolor non finibus mollis. Etiam a purus eget ipsum vehicula rutrum. Fusce aliquam dolor vel dolor ultrices, vel finibus dui aliquam. Sed efficitur vestibulum turpis. Sed blandit non eros ac venenatis. Vestibulum malesuada, dolor ac pellentesque blandit, dui dui viverra risus, eget interdum ex erat quis elit. Donec convallis mi et dui gravida dictum. Donec viverra sapien id pharetra scelerisque. Aliquam ultricies enim nisl, vel tristique velit posuere porttitor. Aliquam quis tincidunt eros. Mauris mauris orci, consequat at tincidunt ut, sollicitudin vel augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam est nunc, eleifend et gravida vel, vulputate quis libero.
+            </p>
+          </div>
+        </div>
 
+        <div class="right">
+          <div class="container">
+            <img src="img/screenshot.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="left">
+          <div class="container">
+            <img src="img/screenshot.jpg">
+          </div>
+        </div>
 
-function UnityReady(){
-var difficulty = window.localStorage.getItem('presetSelector') || 'easy';
-var movement = window.localStorage.getItem('richToggle') || 'universal'// 'universal' or 'perspective';
-var harpoonamt = window.localStorage.getItem('harpoonCountSelector')  || 'four'// 'two' or 'four';
-var jumpy = window.localStorage.getItem('jumpSelector') || 'noJump'// 'jump' or 'noJump';
-  SendMessage ("BrowserInteraction", "RichMove", movement);
-  SendMessage ("BrowserInteraction", "HarpoonDEATH", harpoonamt);
-  SendMessage ("BrowserInteraction", "ActivateJump", jumpy);
-  SendMessage ("BrowserInteraction", "SetDifficulty", difficulty);
-}
+        <div class="right">
+          <div class="container">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar dolor non finibus mollis. Etiam a purus eget ipsum vehicula rutrum. Fusce aliquam dolor vel dolor ultrices, vel finibus dui aliquam. Sed efficitur vestibulum turpis. Sed blandit non eros ac venenatis. Vestibulum malesuada, dolor ac pellentesque blandit, dui dui viverra risus, eget interdum ex erat quis elit. Donec convallis mi et dui gravida dictum. Donec viverra sapien id pharetra scelerisque. Aliquam ultricies enim nisl, vel tristique velit posuere porttitor. Aliquam quis tincidunt eros. Mauris mauris orci, consequat at tincidunt ut, sollicitudin vel augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam est nunc, eleifend et gravida vel, vulputate quis libero.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End screenshot section -->
 
+    <!-- Start bio section -->
+    <div class="bio-container">
+      <div class="row">
+        <div class="column">
+          <div class="bio-card-outer">
+            <div class="bio-card-inner">
+              <img class="img-circle" src="https://avatars2.githubusercontent.com/u/25940347?v=3&s=400" onclick="window.open('https://github.com/De402')" onmouseover="this.style.cursor='pointer'">
+              <h2>De402</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu mi, finibus non hendrerit et, vestibulum eu nunc. Sed mollis finibus dui vel ullamcorper. Proin dictum nisi vitae elit finibus malesuada. Etiam sed dui mi. Sed eget lectus magna. Aliquam vel ullamcorper nibh, sed varius odio. Nunc blandit nibh nec dolor consectetur, in blandit lorem auctor. Vivamus fringilla ut erat sed convallis. Duis turpis odio, iaculis at gravida a, maximus id nulla. Pellentesque et bibendum turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ornare finibus eleifend.
+              </p>
+            </div>
+          </div>
+          <div class="bio-card-outer">
+            <div class="bio-card-inner">
+              <img class="img-circle" src="https://avatars3.githubusercontent.com/u/26583690?v=3&s=400" onclick="window.open('https://github.com/hugobogo')" onmouseover="this.style.cursor='pointer'">
+              <h2>hugobogo</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu mi, finibus non hendrerit et, vestibulum eu nunc. Sed mollis finibus dui vel ullamcorper. Proin dictum nisi vitae elit finibus malesuada. Etiam sed dui mi. Sed eget lectus magna. Aliquam vel ullamcorper nibh, sed varius odio. Nunc blandit nibh nec dolor consectetur, in blandit lorem auctor. Vivamus fringilla ut erat sed convallis. Duis turpis odio, iaculis at gravida a, maximus id nulla. Pellentesque et bibendum turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ornare finibus eleifend.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-</script>
-  <script type='text/javascript'>
-  var Module = {
-    TOTAL_MEMORY: 268435456,
-    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-    compatibilitycheck: null,
-    backgroundColor: "#222C36",
-    splashStyle: "Light",
-    dataUrl: "Release/BoatBuild.data",
-    codeUrl: "Release/BoatBuild.js",
-    asmUrl: "Release/BoatBuild.asm.js",
-    memUrl: "Release/BoatBuild.mem",
-  };
-</script>
-<script src="Release/UnityLoader.js"></script>
-
+      <div class="row">
+        <div class="column">
+          <div class="bio-card-outer">
+            <div class="bio-card-inner">
+              <img class="img-circle" src="https://avatars2.githubusercontent.com/u/25940372?v=3&s=400" onclick="window.open('https://github.com/MartochAZ')" onmouseover="this.style.cursor='pointer'">
+              <h2>MartochAZ</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu mi, finibus non hendrerit et, vestibulum eu nunc. Sed mollis finibus dui vel ullamcorper. Proin dictum nisi vitae elit finibus malesuada. Etiam sed dui mi. Sed eget lectus magna. Aliquam vel ullamcorper nibh, sed varius odio. Nunc blandit nibh nec dolor consectetur, in blandit lorem auctor. Vivamus fringilla ut erat sed convallis. Duis turpis odio, iaculis at gravida a, maximus id nulla. Pellentesque et bibendum turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ornare finibus eleifend.
+              </p>
+            </div>
+          </div>
+          <div class="bio-card-outer">
+            <div class="bio-card-inner">
+              <img class="img-circle" src="https://avatars2.githubusercontent.com/u/25940343?v=3&s=400" onclick="window.open('https://github.com/Livedlong')" onmouseover="this.style.cursor='pointer'">
+              <h2 onclick="window.open('https://github.com/Livedlong')" onmouseover="this.style.cursor='pointer'">Livedlong</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu mi, finibus non hendrerit et, vestibulum eu nunc. Sed mollis finibus dui vel ullamcorper. Proin dictum nisi vitae elit finibus malesuada. Etiam sed dui mi. Sed eget lectus magna. Aliquam vel ullamcorper nibh, sed varius odio. Nunc blandit nibh nec dolor consectetur, in blandit lorem auctor. Vivamus fringilla ut erat sed convallis. Duis turpis odio, iaculis at gravida a, maximus id nulla. Pellentesque et bibendum turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ornare finibus eleifend.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End bio section -->
   </body>
 </html>
