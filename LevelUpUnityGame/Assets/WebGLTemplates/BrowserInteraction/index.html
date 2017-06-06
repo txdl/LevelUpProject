@@ -3,38 +3,41 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>PollutionPirates</title>
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <title>%UNITY_WEB_NAME%</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet">
     <link rel="shortcut icon" href="TemplateData/favicon.ico" />
     <script src="TemplateData/UnityProgress.js"></script>
   </head>
   <body class="template">
-    <div class="template-wrap clear">
+    <!--Start of navbar section -->
+    <div class="navbar">
+      <a href="index.html" class="flex-item">Home</a>
+      <a href="menu.html" class="flex-item">Menu</a>
+      <a href="game.html" class="flex-item active">Game</a>
+    </div>
+    <!--End of navBar section -->
+
+    <div class="game-container">
       <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="%UNITY_HEIGHT%" width="%UNITY_WIDTH%"></canvas>
       <br>
       <div class="logo"></div>
       <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">%UNITY_WEB_NAME%</div>
-      <br>
-      <div style="text-align:center;padding:20px">
-        <br>
-        <button onclick="RichToggle()">Movement Change (to true)</button>
-
-      </div>
-    </div>    
+    </div>
 <script>
-var difficulty = window.localStorage.getItem('presetSelector') || 'easy';
-var movement = window.localStorage.getItem('richToggle')// 'universal' or 'perspective';
-var harpoonamt = window.localStorage.getItem('harpoonCountSelector')// 'two' or 'four';
-var jumpy = window.localStorage.getItem('jumpSelector')// 'jump' or 'noJump';
 
-window.setTimeout(function() {
-  SendMessage ("BrowserInteraction", "presetSelector", difficulty);
-  // write code here
-}, 1000);
 
-function RichToggle(){
-  SendMessage ("BrowserInteraction", "RichMove", "true");
+function UnityReady(){
+  var difficulty = window.localStorage.getItem('presetSelector') || 'easy';
+  var movement = window.localStorage.getItem('richToggle') || 'universal'// 'universal' or 'perspective';
+  var harpoonamt = window.localStorage.getItem('harpoonCountSelector')  || 'four'// 'two' or 'four';
+  var jumpy = window.localStorage.getItem('jumpSelector') || 'noJump'// 'jump' or 'noJump';
+
+  SendMessage ("BrowserInteraction", "RichMove", movement);
+  SendMessage ("BrowserInteraction", "HarpoonDEATH", harpoonamt);
+  SendMessage ("BrowserInteraction", "ActivateJump", jumpy);
+  SendMessage ("BrowserInteraction", "SetDifficulty", difficulty);
 }
 
 
